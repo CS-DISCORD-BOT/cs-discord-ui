@@ -4,9 +4,9 @@ export const SidebarStyle = styled.div`
   width: 100px;
   height: 100%;
   position: fixed;
-  overflow: sroll;
   background-color: ${({ theme }) => theme.base.sidebar};
   color: ${({ theme }) => theme.text.main};
+  overflow: scroll;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -20,6 +20,10 @@ export const MenuStyle = styled.div`
   color: ${({ theme }) => theme.text.main};
   box-sizing: border-box;
   margin-left: 100px;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const BasePageStyle = styled.div`
@@ -79,32 +83,45 @@ export const SidebarContent = styled.div`
 `;
 
 export const MenubarContent = styled.div`
-box-sizing: border-box;
-padding: ${({ theme }) => theme.padding.content};
-margin-top: 100px;
+  box-sizing: border-box;
+  padding: ${({ theme }) => theme.padding.content};
+  margin-top: 75px;
 `;
 
 export const MenubarCategory = styled.div`
+  margin-top: 20px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   :nth-child(2) {
     margin: 20px 0px;
   }
   span {
-    padding: 0px 20px;
+    padding: 0px 25px;
   }
-  transition: 100ms background-color;
+  color: ${({ theme }) => theme.text.text};
   :hover {
     cursor: pointer;
-    background-color: #42494c;
+    color: ${({ theme }) => theme.text.main};
   }
 `;
 
 export const MenubarCategoryItem = styled.div`
-  font-size: 15px;
+  font-size: 18px;
   font-weight: lighter;
+  padding: 5px 0px;
+  color: ${({ theme }) => theme.text.text};
   span {
-    padding: 0px 20px;
+    padding: 0px 25px;
   }
+  transition: 100ms background-color;
+  :hover {
+    cursor: pointer;
+    color: ${({ theme }) => theme.text.main};
+    background-color: #32343a;
+  }
+`;
+
+export const BasePageContent = styled.div`
+  padding: 25px;
 `;

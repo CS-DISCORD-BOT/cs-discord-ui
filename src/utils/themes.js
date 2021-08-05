@@ -6,6 +6,7 @@ export const DarkTheme = {
   },
   text: {
     main: "#FFFFFF",
+    text: "grey",
   },
   height: {
     top: "100px",

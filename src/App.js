@@ -1,4 +1,5 @@
-import { Switch, Redirect, Route } from 'react-router-dom'
+import React, { useState} from 'react';
+
 import { DashboardPage } from './pages/Dashboard';
 import { Sidebar } from './components/Sidebar'
 import { Menubar } from './components/Menu';
@@ -12,14 +13,21 @@ const channels = [
 ];
 
 function App() {
+
+  const [course, setCourse] = useState({})
+  const [channel, setChannel] = useState({})
+  
   return (
     <div>
-      <Sidebar guild={guild} />
-      <Menubar channels={channels} />
-      <Switch>
-        <Redirect path="/" exact={true} to ="/dashboard"/>
-        <Route path="/dashboard" exact={true} component={DashboardPage} />
-      </Switch>
+      <Sidebar guild={guild}/>
+      <Menubar 
+        channels={channels}
+        course={course}
+        setCourse={setCourse}
+        channel={channel}
+        setChannel={setChannel}
+      />
+      <DashboardPage channel={channel}/>
     </div>
   );
 }

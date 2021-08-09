@@ -85,7 +85,7 @@ export const SidebarContent = styled.div`
 export const MenubarContent = styled.div`
   box-sizing: border-box;
   padding: ${({ theme }) => theme.padding.content};
-  margin-top: 75px;
+  margin-top: 100px;
 `;
 
 export const MenubarCategory = styled.div`
@@ -93,7 +93,7 @@ export const MenubarCategory = styled.div`
   box-sizing: border-box;
   font-size: 20px;
   font-weight: bold;
-  :nth-child(2) {
+  :nth-child(1) {
     margin: 20px 0px;
   }
   span {
